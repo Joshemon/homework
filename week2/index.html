@@ -15,16 +15,32 @@
   float: left;
   width: 50%;
   padding: 10px;
-  height: 600px; 
+  height: 800px; 
   margin: 20px;
+  text-align: left;
 }
-
+  .column2 {
+    float:right;
+    width: 50%;
+    padding: 10px;
+    height: 800px;
+    margin: 20px;
+    text-align:left;
+  }
+  .pic {
+    padding: 10px;
+    margin: 15px;
+  }
+ .entire {
+   background-color: darkred;
+ }
 /* I'd like to have my bio text with and image under it in the left column and on the right a column with 
 two or three images stacked on top of each other*/
 .row:after {
   content: "";
   display: table;
   clear: both;
+ 
   
 }
 * {
@@ -33,39 +49,56 @@ two or three images stacked on top of each other*/
 
 }
 
-
+ 
  
   </style>
+  
     </head>
 
 <body>
-  <div class="container">
+  
+  <div class="entire">
  
     <div>
       <a class="btn btn-dark" href="./mainpage.html" role="button"> Home</a>
     </div>
-    
 
-    <div class="row">
-      <div class="column" style="background-color:#aaa;">
-        <h2 class="mt-0"> Personal Background</h2>
-        <p>
-          My name is Joshuah Montero and I am an aspiring developer.
-          <br>
-          I am currently working in a Tagrt UDC and looking to make a career change that will 
-          provide a sustainable future for myself in the technology industry.
-          I'm interested in nature and landscape photography and pursue it as an active hobby.
-          I enjoy the mountains and forests most and love camping.
-        </p>
-        <img src="./Red Rose.JPG" class="mr-3" alt="Close up of rose">
-      </div>
-      </div>
-      </div>
-        
-      <div class="column2" style="background-color:#aaa;" float:right; class="media">
-        <div class="media-body">
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="column" style="background-color:#aaa;">
+              <h2 class="mt-0"> Personal Background</h2>
+              <p>
+                My name is Joshuah Montero and I am an aspiring developer.
+                <br>
+                I am currently working in a Tagrt UDC and looking to make a career change that will 
+                provide a sustainable future for myself in the technology industry.
+                I'm interested in nature and landscape photography and pursue it as an active hobby.
+                I enjoy the mountains and forests most and love camping.
+              </p>
+              <img src="./Red Rose.JPG" class="mr-3"  class = "img-responsive" width = "100%"  alt="Close up of rose">
+            </div>
+        </div>
+
+
+        <div class="col">
+          2 of 2
+        </div>
       </div>
     
+      
+      <div class="column2" style="background-color:rgb(64, 14, 248);" float:right; class="media">
+        <h2 class="mt-0"> More Photos</h2>
+        <img src="./closefire.jpeg" class="mr-3"  class = "img-responsive" width = "95%" height = "46%" alt="Close up of firepit">
+        <img src="./papowindow.jpeg" class="mr-3"  class = "img-responsive" width = "95%" height = "46%" alt="My dog Papo looking out the window">
+        
+
+      </div>
+    </div>
+    </div>
   <h2></h2>
   <p></p>
   <div></div>
