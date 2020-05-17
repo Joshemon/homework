@@ -1,16 +1,20 @@
 * {
     box-sizing: border-box;
   }
-  
-  
-  .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 500px; 
+  .html { 
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
-  
-  
+  .heading {
+    text-align: center;
+    font-size: 30px;
+    border: white;
+    margin: 15px;
+
+  }  
   .row:after {
     content: "";
     display: table;
@@ -22,3 +26,28 @@
       border: 5px;
       border-style: dashed;
   }
+
+
+  .column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 800px; 
+    margin: 20px;
+    text-align: left;
+  }
+    .column2 {
+      float:right;
+      width: 50%;
+      padding: 10px;
+      height: 800px;
+      margin: 20px;
+      text-align:left;
+    }
+    .pic {
+      padding: 10px;
+      margin: 15px;
+    }
+   .entire {
+     background-color: darkred;
+   }
