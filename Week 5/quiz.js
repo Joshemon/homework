@@ -1,3 +1,5 @@
+
+// need to have divs and id's of quiz results and submit
 const quizcontainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
@@ -32,15 +34,16 @@ myQuestions.forEach(
         // add this question and its answers to the output
 
         output.push(
-            `<div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> ${answers.join('')} </div>`
+            `<div class="question"> ${currentQuestion.question}</div>
+
+            <div class="answers"> ${answers.join('')}></div>`
         );
         }
 );
 
 // finally combine our output list into one string of html and piut it on the page
-quizCoiontainer.innerHTML = output.join('');
-    }
+quizContainer.innerHTML = output.join('');
+    
 
     myQuestions.forEach( (currentQuestion, questionNumber) => {
         // thecode we want to run for each question goes here
@@ -106,7 +109,7 @@ const myQuestions = [
         },
         correctAnswer: "b"
     }
-
+]
 
 ;
 
