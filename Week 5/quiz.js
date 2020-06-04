@@ -10,53 +10,6 @@ function buildQuiz(){}
 const output =[];
 
 // for each question..
-myQuestions.forEach(
-    (currentQuestion, questionNumber) => {
-
-        // variable to store the list of possible answers
-        const answers = [];
-
-        // and for each available answer..
-        
-        for(letter in currentQuestions.answers){
-
-            //  add an HTML radio button
-
-            answers.push(
-                `<label>
-                <input type="radio" name="question${questionNumber}" value="${letter}">
-                    ${letter} :
-                    ${currentQuestion.answers[letter]}
-                    </label>`
-            );
-        }
-
-        // add this question and its answers to the output
-
-        output.push(
-            `<div class="question"> ${currentQuestion.question}</div>
-
-            <div class="answers"> ${answers.join('')}></div>`
-        );
-        }
-);
-
-// finally combine our output list into one string of html and piut it on the page
-quizContainer.innerHTML = output.join('');
-    
-
-    myQuestions.forEach( (currentQuestion, questionNumber) => {
-        // thecode we want to run for each question goes here
-    });
-
-function showResults(){}
-
-// display quiz right away 
-buildQuiz();
-
-
-// on submit, show results
-submitButton.addEventListener('click' , showResults);
 
 const myQuestions = [
     {
@@ -110,6 +63,55 @@ const myQuestions = [
         correctAnswer: "b"
     }
 ]
+
+myQuestions.forEach(
+    (currentQuestion, questionNumber) => {
+
+        // variable to store the list of possible answers
+        const answers = [];
+
+        // and for each available answer..
+        
+        for(letter in currentQuestions.answers){
+
+            //  add an HTML radio button
+
+            answers.push(
+                `<label>
+                <input type="radio" name="question${questionNumber}" value="${letter}">
+                    ${letter} :
+                    ${currentQuestion.answers[letter]}
+                    </label>`
+            );
+        }
+
+        // add this question and its answers to the output
+
+        output.push(
+            `<div class="question"> ${currentQuestion.question}</div>
+
+            <div class="answers"> ${answers.join('')}></div>`
+        );
+        }
+);
+
+// finally combine our output list into one string of html and piut it on the page
+quizContainer.innerHTML = output.join('');
+    
+
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+        // thecode we want to run for each question goes here
+    });
+
+function showResults(){}
+
+// display quiz right away 
+buildQuiz();
+
+
+// on submit, show results
+submitButton.addEventListener('click' , showResults);
+
 
 ;
 
